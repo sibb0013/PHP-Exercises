@@ -150,31 +150,15 @@ Print the array from task 4 in html table:
 */
 ?>
 
-
-<table>
-  <tr>
-    <th>Food</th>
-    <th>Type</th>
-    <th>Origin</th>
-  </tr>
-  <tr>
-    <td>Nachos</td>
-    <td>Appetizers</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Pizza</td>
-    <td>Main course</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>Rice Cake</td>
-    <td>desert</td>
-    <td>China</td>
-  </tr>
-  <tr>
-    <td>Chicken Wings</td>
-    <td>Side</td>
-    <td>US</td>
-  </tr>
-</table>
+print '<table>';
+    print '<tr><th>food</th><th>type</th><th>origin</th></tr>';
+            
+foreach( $food_assoc as $food_class )
+{
+    echo '<tr>';
+    foreach( $food_class as $key )
+    {
+        echo '<td>'.$key.'</td>';
+    }
+    echo '</tr>';
+}
